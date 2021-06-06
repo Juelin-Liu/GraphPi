@@ -127,7 +127,110 @@ Pattern::Pattern(PatternType type) {
                     add_edge(j, i);
         return;
     }
+    if(type == PatternType::Q1){
+        size = 5;
+        adj_mat = new int[size * size];
+        memset(adj_mat, 0, size * size * sizeof(int));
+        add_edge(0, 1);
+        add_edge(0, 2);
+        add_edge(1, 3);
+        add_edge(2, 4);
+        add_edge(3, 4);
+        return;
+    }
 
+    if(type == PatternType::Q2){
+        size = 6;
+        adj_mat = new int[size * size];
+        memset(adj_mat, 0, size * size * sizeof(int));
+        add_edge(0, 1);
+        add_edge(0, 2);
+        add_edge(1, 2);
+        add_edge(1, 3);
+        add_edge(1, 4);
+        add_edge(2, 4);
+        add_edge(2, 5);
+        add_edge(3, 4);
+        add_edge(4, 5);
+        return;
+    }
+
+    if(type == PatternType::Q3){
+        size = 6;
+        adj_mat = new int[size * size];
+        memset(adj_mat, 0, size * size * sizeof(int));
+        add_edge(0, 1);
+        add_edge(0, 2);
+        add_edge(1, 2);
+        add_edge(1, 3);
+        add_edge(1, 4);
+        add_edge(1, 5);
+        add_edge(2, 3);
+        add_edge(2, 4);
+        add_edge(2, 5);
+        add_edge(3, 4);
+        add_edge(4, 5);
+        return;
+    }
+
+    if(type == PatternType::Q4){
+        size = 6;
+        adj_mat = new int[size * size];
+        memset(adj_mat, 0, size * size * sizeof(int));
+        add_edge(0, 1);
+        add_edge(0, 2);
+        add_edge(1, 3);
+        add_edge(2, 3);
+        add_edge(2, 4);
+        add_edge(2, 5);
+        add_edge(3, 4);
+        add_edge(3, 5);
+        add_edge(4, 5);
+        return;
+    }
+
+    if(type == PatternType::Q5){
+        size = 7;
+        adj_mat = new int[size * size];
+        memset(adj_mat, 0, size * size * sizeof(int));
+        add_edge(0, 1);
+        add_edge(0, 2);
+        add_edge(0, 3);
+        add_edge(0, 4);
+        add_edge(0, 5);
+        add_edge(1, 2);
+        add_edge(1, 4);
+        add_edge(1, 5);
+        add_edge(2, 4);
+        add_edge(2, 5);
+        add_edge(3, 4);
+        add_edge(3, 5);
+        add_edge(4, 5);
+        add_edge(4, 6);
+        add_edge(5, 6);
+        return;
+    }
+
+    if(type == PatternType::Q6){
+        size = 7;
+        adj_mat = new int[size * size];
+        memset(adj_mat, 0, size * size * sizeof(int));
+        add_edge(0, 1);
+        add_edge(0, 2);
+        add_edge(0, 3);
+        add_edge(0, 4);
+        add_edge(1, 2);
+        add_edge(1, 3);
+        add_edge(1, 4);
+        add_edge(2, 3);
+        add_edge(2, 4);
+        add_edge(3, 4);
+        add_edge(3, 5);
+        add_edge(3, 6);
+        add_edge(4, 5);
+        add_edge(4, 6);
+        return;
+    }
     printf("invalid pattern type!\n");
     assert(0);
 }
