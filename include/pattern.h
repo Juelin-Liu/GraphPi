@@ -14,7 +14,8 @@ enum PatternType {
     House,
     Hourglass,
     Cycle_6_Tri,
-    Clique_7_Minus
+    Clique_7_Minus,
+    Q1,Q2,Q3,Q4,Q5,Q6
 };
 
 
